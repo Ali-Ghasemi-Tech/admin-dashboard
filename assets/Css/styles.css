@@ -1,0 +1,61 @@
+:root {
+  --nav_font: clamp(0.8em, 2vw, 1.5em);
+}
+* {
+  height: 100%;
+}
+body {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+}
+#sidebar {
+  display: grid;
+  grid-template: repeat(13, 3vw) / 1fr;
+  background-color: #0e8388;
+  grid-area: 1/1/5/1;
+  padding: 1vw 0 0 1.5vw;
+}
+#header {
+  background-color: #2e4f4f;
+  grid-area: 1/2/1/6;
+}
+#main {
+  background-color: #cbe4de;
+  grid-area: 2/2/5/6;
+}
+#dashboard-logo {
+  color: white;
+  font-size: clamp(1.5em, 3vw, 2.3em);
+}
+#nav-container {
+  display: grid;
+  padding-left: 1vw;
+  grid-template: repeat(6, 3vw) / 1fr;
+  grid-area: 3 / 1 / 8 / 1;
+}
+.nav-text {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: var(--nav_font);
+}
+
+#option-container {
+  padding-left: 1vw;
+  display: grid;
+  grid-template-rows: repeat(3, 3vw);
+  grid-row: 10 / 14;
+}
+.option-text {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: var(--nav_font);
+}
+
+#dashboard-logo:hover,
+.nav-text:hover,
+.option-text:hover {
+  color: rgb(226, 226, 226);
+  cursor: pointer;
+}
