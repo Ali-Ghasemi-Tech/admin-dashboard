@@ -4,6 +4,8 @@ const option_hamburger = document.getElementById("option-container");
 const logo = document.querySelector(".dashboard-logo");
 const menu = document.querySelector(".dashboard-menu");
 const sidebar = document.getElementById("sidebar");
+const main = document.getElementById("main");
+const header = document.getElementById("header");
 
 sidebar_hamburger.addEventListener("click", () => {
   sidebar_hamburger.classList.toggle("hamburger");
