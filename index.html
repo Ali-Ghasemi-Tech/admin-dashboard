@@ -8,22 +8,58 @@
   </head>
   <body>
     <header id="header"></header>
-    <aside id="sidebar">
-      <div id="dashboard-logo">Dashboard</div>
+    <aside id="sidebar" class="sidebar">
+      <div id="dashboard-logo">
+        <img class="dashboard-logo" src="./assets/icons/dashboard.svg" alt="" />
+        <img
+          class="dashboard-menu hidden"
+          src="./assets/icons/menu.svg"
+          alt=""
+        />
+        <span>Dashboard</span>
+      </div>
       <div id="nav-container">
-        <span class="nav-text">Home</span>
-        <span class="nav-text">Profile</span>
-        <span class="nav-text">Messages</span>
-        <span class="nav-text">History</span>
-        <span class="nav-text">Tasks</span>
-        <span class="nav-text">Communities</span>
+        <div class="nav-text-container">
+          <img src="./assets/icons/home.svg" alt="" />
+          <span class="nav-text">Home</span>
+        </div>
+        <div class="nav-text-container">
+          <img src="./assets//icons/profile.svg" alt="" />
+          <span class="nav-text">Profile</span>
+        </div>
+        <div class="nav-text-container">
+          <img src="./assets//icons//message.svg" alt="" />
+          <span class="nav-text">Messages</span>
+        </div>
+        <div class="nav-text-container">
+          <img src="/assets/icons/history.svg" alt="" />
+          <span class="nav-text">History</span>
+        </div>
+        <div class="nav-text-container">
+          <img src="/assets/icons/tasks.svg" alt="" />
+          <span class="nav-text">Tasks</span>
+        </div>
+        <div class="nav-text-container">
+          <img src="/assets//icons/communities.svg" alt="" />
+          <span class="nav-text">Communities</span>
+        </div>
       </div>
       <div id="option-container">
-        <span class="option-text">Settings</span>
-        <span class="option-text">Support</span>
-        <span class="option-text">Privacy</span>
+        <div class="option-text-container">
+          <img src="/assets/icons/settings.svg" alt="" />
+          <span class="option-text">Settings</span>
+        </div>
+        <div class="option-text-container">
+          <img src="/assets/icons/support.svg" alt="" />
+          <span class="option-text">Support</span>
+        </div>
+        <div class="option-text-container">
+          <img src="/assets/icons/privacy.svg" alt="" />
+          <span class="option-text">Privacy</span>
+        </div>
       </div>
     </aside>
     <main id="main"></main>
   </body>
+  <script src="/assets/js/logic.js"></script>
 </html>

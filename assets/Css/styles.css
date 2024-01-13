@@ -4,34 +4,71 @@
 * {
   height: 100%;
 }
+span,
+div {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
 body {
   display: grid;
-  grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+  grid-template: repeat(4, 1fr) / repeat(20, 1fr);
 }
-#sidebar {
+aside {
+  transition: all 0.3s ease-in-out;
+}
+.sidebar {
   display: grid;
-  grid-template: repeat(13, 3vw) / 1fr;
+  width: 95%;
+  grid-template-rows: repeat(13, 3vw);
   background-color: #0e8388;
-  grid-area: 1/1/5/1;
-  padding: 1vw 0 0 1.5vw;
+  grid-area: 1/1/5/5;
+  padding: 1vw 0 0 1vw;
 }
+.closed-sidebar {
+  width: 4vw;
+}
+
 #header {
   background-color: #2e4f4f;
-  grid-area: 1/2/1/6;
+  grid-area: 1/5/1/21;
 }
 #main {
   background-color: #cbe4de;
-  grid-area: 2/2/5/6;
+  grid-area: 2/5/5/21;
 }
 #dashboard-logo {
+  display: flex;
+  align-items: center;
   color: white;
   font-size: clamp(1.5em, 3vw, 2.3em);
 }
+
 #nav-container {
-  display: grid;
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  gap: 1.8vw;
   padding-left: 1vw;
-  grid-template: repeat(6, 3vw) / 1fr;
   grid-area: 3 / 1 / 8 / 1;
+}
+.nav-text-container,
+.option-text-container {
+  width: fit-content;
+  display: flex;
+  gap: 0.5vw;
+}
+.nav-text-container:hover,
+.option-text-container:hover,
+#dashboard-logo:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.nav-text-container > img,
+.option-text-container > img {
+  width: 1.4vw;
+}
+svg {
+  fill: white;
 }
 .nav-text {
   display: flex;
@@ -53,9 +90,30 @@ body {
   font-size: var(--nav_font);
 }
 
-#dashboard-logo:hover,
-.nav-text:hover,
-.option-text:hover {
-  color: rgb(226, 226, 226);
-  cursor: pointer;
+.hamburger > span {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-0.3vw);
+  width: 0;
+}
+
+.nav-hamburger > div > span {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-0.5vw);
+  width: 0;
+}
+.nav-hamburger > div {
+  transform: translateX(-0.3vw);
+}
+img {
+  display: inline;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
 }
