@@ -1,0 +1,183 @@
+.header {
+  background-color: #2e4f4f;
+  width: 100%;
+  height: 10vw;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template: repeat(2, 1fr) / 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.search-box {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  align-items: center;
+  grid-column: 1;
+}
+.search-input {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  padding: 0 1vw;
+}
+.search-input::placeholder {
+  color: white;
+}
+.search-button {
+  background-color: transparent;
+  border: none;
+  height: 2vw;
+  transform: translateY(0px);
+  transition: all 50ms ease-in-out;
+}
+.search-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.search-button:active {
+  opacity: 0.3;
+  transform: translateY(-5px);
+}
+
+.user-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vw;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.user-img {
+  width: 3vw;
+  height: 3vw;
+  object-fit: cover;
+  object-position: 25% 50%;
+  border-radius: 50%;
+  transform: translateY(0);
+  transition: all 0.2s ease-in-out;
+}
+.user-img:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+.user-img:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.bell {
+  height: 1.5vw;
+}
+.user-section > span {
+  height: 1vw;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(0.8em, 1vw, 1.2em);
+}
+.user-section > span:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255, 0.5);
+}
+.bell-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.bell-box > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(0.5em, 1vw, 1em);
+  font-weight: bold;
+  position: absolute;
+  background-color: red;
+  height: 0.5vw;
+  width: 0.5vw;
+  border-radius: 50%;
+  padding: 0.3vw;
+  color: white;
+  top: 1.1vw;
+  right: -0.2vw;
+}
+.bell:hover {
+  cursor: pointer;
+  animation: jingle 0.5s;
+  transition: all 0.1s ease-in-out;
+}
+.bell:active {
+  transform: translateY(3px);
+}
+.info-section {
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+  gap: 1vw;
+}
+.info-section > img {
+  width: 4vw;
+  height: 4vw;
+  object-fit: cover;
+  object-position: 25% 50%;
+  border-radius: 50%;
+}
+.info-text {
+  justify-content: center;
+  display: flex;
+  color: white;
+  height: 4vw;
+  flex-direction: column;
+}
+.info-name {
+  font-size: clamp(1em, 2vw, 1.5em);
+}
+.action-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5vw;
+  align-items: center;
+  margin-right: 1vw;
+}
+.action-section > button {
+  font-size: clamp(0.8em, 1.5vw, 1.2em);
+  width: 5vw;
+  height: 1vw;
+  justify-content: center;
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  border-radius: 2vw;
+  background-color: #cbe4de;
+  border: none;
+  color: #2e4f4f;
+  transform: translateY(0);
+  transition: all 0.2s ease-in-out;
+}
+.action-section > button:hover {
+  transform: translateY(-3px);
+  box-shadow: 2px 2px 5px 0 rgb(255, 255, 255, 0.5);
+  cursor: pointer;
+  color: #cbe4de;
+  background-color: #2e4f4f;
+  border: 1px #cbe4de solid;
+}
+.action-section > button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+@keyframes jingle {
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
