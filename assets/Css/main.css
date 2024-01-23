@@ -13,7 +13,7 @@ h3 {
   position: relative;
   width: auto;
   display: grid;
-  row-gap: 2vw;
+  row-gap: 3vw;
   grid-template: 1fr 1fr / 3fr 1fr;
   overflow-y: scroll;
   padding-top: 3vw;
@@ -23,7 +23,8 @@ h3 {
   border-bottom: 1px solid rgba(58, 58, 58, 0.5);
   padding: 1vw 0;
 }
-.announcment {
+.announcment,
+.trending {
   background-color: blueviolet;
   margin: 0 1vw 1vw 1vw;
   grid-row: 1/2;
@@ -58,9 +59,10 @@ h3 {
   color: black;
 }
 .trending {
-  background-color: brown;
+  background-color: white;
   grid-row: 2/3;
   grid-column: 2/3;
+  margin-top: 1vw;
 }
 .projects {
   display: grid;
@@ -68,6 +70,28 @@ h3 {
   grid-area: 1 / 1 / 3 / 1;
   gap: 2vw;
   padding: 0 1vw 1vw 1vw;
+}
+.sub-img > img {
+  border-radius: 50px;
+  width: 3vw;
+  height: 3vw;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.subscribers {
+  display: flex;
+  gap: 0.8vw;
+  align-items: center;
+  height: fit-content;
+}
+.sub-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2vw;
+  justify-content: center;
+}
+.sub-info > span {
+  height: fit-content;
 }
 .project-card {
   border-radius: 1vw;

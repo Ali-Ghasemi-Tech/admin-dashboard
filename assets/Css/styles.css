@@ -45,3 +45,7 @@ img {
   height: 0px;
   overflow: hidden;
 }
+h4 {
+  height: fit-content;
+  margin: 0;
+}
